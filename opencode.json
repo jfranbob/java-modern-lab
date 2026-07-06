@@ -1,6 +1,26 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": ["AGENTS.md"],
+  "default_agent": "general",
+
+  "agent": {
+    "module-creator": {
+      "description": "Creates new modules following the project template",
+      "mode": "subagent",
+      "permission": { "edit": "allow", "bash": "ask" }
+    },
+    "reviewer": {
+      "description": "Reviews code against quality gates",
+      "mode": "subagent",
+      "permission": { "edit": "deny", "bash": "ask" }
+    },
+    "researcher": {
+      "description": "Conducts research on engineering questions",
+      "mode": "subagent",
+      "permission": { "edit": "deny", "bash": "ask", "webfetch": "allow", "websearch": "allow" }
+    }
+  },
+
   "command": {
     "build": {
       "description": "Compile the project with Maven",
@@ -19,8 +39,19 @@
       "template": "mvn spotless:apply"
     },
     "create-module": {
-      "description": "Scaffold a new engineering module under modules/",
-      "template": "Create a new module in modules/$1 following the template at templates/module-template/. Include README.md, theory.md, an example/, tests/, and a decision record. Use Java 25 features."
+      "description": "Scaffold a new module under modules/",
+      "agent": "module-creator",
+      "template": "Create a new module at $1 using the module structure from templates/module-template/. Include README.md, theory.md, an example/, tests/, decision.md, and references.md. Use Java 25."
+    },
+    "review": {
+      "description": "Review the latest changes against quality gates",
+      "agent": "reviewer",
+      "template": "Review the changes in $1 against the project quality gates."
+    },
+    "research": {
+      "description": "Research an engineering question",
+      "agent": "researcher",
+      "template": "Research: $1. Consult official sources (JEPs, OpenJDK, Java spec). Provide analysis and references."
     },
     "adr": {
       "description": "Create a new Architecture Decision Record",
@@ -28,7 +59,22 @@
     },
     "issue": {
       "description": "Create a GitHub issue using the appropriate template",
-      "template": "Create a GitHub issue for the project. Use one of the templates in .github/ISSUE_TEMPLATE/ (research.yml, feature.yml, benchmark.yml, documentation.yml, bug.yml, engineering-question.yml) depending on the type."
+      "template": "Create a GitHub issue using one of the templates in .github/ISSUE_TEMPLATE/."
+    }
+  },
+
+  "skills": {
+    "paths": [".opencode/skills"]
+  },
+
+  "references": {
+    "docs": {
+      "path": "docs",
+      "description": "Project documentation: vision, roadmap, ADRs, quality gates"
+    },
+    "templates": {
+      "path": "templates",
+      "description": "Reusable project templates for modules and benchmarks"
     }
   }
 }
