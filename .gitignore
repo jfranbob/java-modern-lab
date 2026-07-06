@@ -1,0 +1,46 @@
+# Compiled files
+*.class
+
+# Logs
+*.log
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/private/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Java
+hs_err_pid*
+replay_pid*
+
+# Coverage
+coverage/
+jacoco.exec
+
+# Generated documentation
+/site/
+
+# Temporary
+tmp/
+temp/
