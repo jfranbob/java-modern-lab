@@ -1,0 +1,52 @@
+name: Engineering Question
+description: Propose an engineering question that drives the entire lifecycle — from research to release.
+title: "[Question]: "
+labels:
+  - type: research
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every module starts with a question.
+
+        **Lifecycle**: Research → Implementation → Benchmark (optional) → Documentation → Module → Release
+
+  - type: input
+    id: question
+    attributes:
+      label: Engineering Question
+      description: A clear, concise engineering question.
+      placeholder: Should Virtual Threads replace reactive programming?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this question relevant?
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: What do you currently believe the answer is?
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: What will we learn or gain by answering this question?
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Current Phase
+      options:
+        - Research
+        - Implementation
+        - Benchmark
+        - Documentation
+        - Module Review
+        - Release
+      default: 0

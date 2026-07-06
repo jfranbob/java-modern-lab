@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Engineering Discussions
+    url: https://github.com/jfranbob/java-modern-lab/discussions
+    about: Ask engineering questions or discuss architectural ideas here.
