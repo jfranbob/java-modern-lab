@@ -139,33 +139,45 @@ This project focuses on engineering decisions rather than API documentation.
 
 ```text
 java-modern-lab/
-
-docs/
-    Vision, roadmap, contribution guide, quality standards and architecture decision records.
-
-java/
-    Modern Java language features and JVM capabilities.
-
-spring/
-    Spring Boot, Spring Framework and production-ready practices.
-
-architecture/
-    Software architecture patterns and design approaches.
-
-dop/
-    Data-Oriented Programming experiments.
-
-ai/
-    AI-assisted software engineering workflows.
-
-benchmarks/
-    JMH benchmarks and performance analysis.
-
-templates/
-    Reusable templates for creating new modules.
-
-tools/
-    Development tooling and automation.
+│
+├── .github/
+│   ├── workflows/              CI/CD pipeline configuration
+│   ├── ISSUE_TEMPLATE/         Issue forms (Research, Feature, Benchmark, Docs, Bug, Engineering Question)
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── CODEOWNERS
+│   └── dependabot.yml
+│
+├── docs/
+│   ├── adr/                    Architecture Decision Records
+│   ├── vision.md               Project vision
+│   ├── roadmap.md              Version roadmap
+│   ├── coding-standards.md     Code quality and formatting rules
+│   ├── quality-gates.md        Merge requirements
+│   ├── architecture.md         Repository architecture overview
+│   ├── dev-log.md              Development diary
+│   └── references.md           Curated reference links
+│
+├── modules/
+│   ├── java/                   Modern Java language features and JVM capabilities
+│   ├── spring/                 Spring Boot, Spring Framework and production-ready practices
+│   ├── architecture/           Software architecture patterns and design approaches
+│   ├── dop/                    Data-Oriented Programming experiments
+│   ├── ai/                     AI-assisted software engineering workflows
+│   └── README.md               Module structure guide
+│
+├── benchmarks/
+│       JMH benchmarks and performance analysis
+│
+├── templates/
+│   ├── module-template/        Reusable template for bootstrapping new modules
+│   └── benchmark-template/     Reusable template for benchmarks
+│
+├── ENGINEERING_PRINCIPLES.md   10 guiding principles for the project
+├── CHANGELOG.md
+├── SECURITY.md
+├── pom.xml                     Maven project (Java 25)
+├── .editorconfig
+└── .gitignore
 ```
 
 ---
