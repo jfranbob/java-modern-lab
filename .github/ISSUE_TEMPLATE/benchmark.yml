@@ -1,0 +1,27 @@
+name: Benchmark
+description: Measure and compare implementations.
+title: "[Benchmark]: "
+labels:
+  - type: benchmark
+body:
+  - type: input
+    id: question
+    attributes:
+      label: Benchmark Question
+      placeholder: Are Virtual Threads faster than Platform Threads?
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Methodology
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Metrics
+      placeholder: Throughput, latency, memory...
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Outcome

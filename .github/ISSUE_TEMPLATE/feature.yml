@@ -1,0 +1,32 @@
+name: Feature
+description: Add a new module or functionality.
+title: "[Feature]: "
+labels:
+  - type: feature
+body:
+  - type: input
+    id: goal
+    attributes:
+      label: Goal
+      placeholder: Add Records module
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      value: |
+        - [ ] Implementation
+        - [ ] Tests
+        - [ ] Documentation
+        - [ ] References
+        - [ ] Decision Record
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done

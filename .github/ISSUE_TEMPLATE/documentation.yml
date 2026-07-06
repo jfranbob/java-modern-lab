@@ -1,0 +1,20 @@
+name: Documentation
+description: Improve project documentation.
+title: "[Docs]: "
+labels:
+  - type: docs
+body:
+  - type: input
+    id: document
+    attributes:
+      label: Document
+
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed Changes
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this improvement needed?

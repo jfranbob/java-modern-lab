@@ -1,0 +1,43 @@
+name: Research
+description: Investigate an engineering question before implementation.
+title: "[Research]: "
+labels:
+  - type: research
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Investigate the topic before writing any code.
+
+  - type: input
+    id: question
+    attributes:
+      label: Engineering Question
+      description: What engineering question are we trying to answer?
+      placeholder: Should Java Records replace traditional DTOs?
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: Describe the context and motivation.
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Initial Hypothesis
+      description: What do you currently believe?
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Official References
+      description: JEPs, official docs, RFCs, books...
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Success Criteria
+      description: What should be answered when this research is complete?
