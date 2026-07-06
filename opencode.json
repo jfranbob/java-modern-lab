@@ -1,0 +1,34 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "command": {
+    "build": {
+      "description": "Compile the project with Maven",
+      "template": "mvn compile -q"
+    },
+    "test": {
+      "description": "Run all tests",
+      "template": "mvn test"
+    },
+    "lint": {
+      "description": "Check code formatting and style",
+      "template": "mvn spotless:check"
+    },
+    "fix": {
+      "description": "Auto-fix code formatting issues",
+      "template": "mvn spotless:apply"
+    },
+    "create-module": {
+      "description": "Scaffold a new engineering module under modules/",
+      "template": "Create a new module in modules/$1 following the template at templates/module-template/. Include README.md, theory.md, an example/, tests/, and a decision record. Use Java 25 features."
+    },
+    "adr": {
+      "description": "Create a new Architecture Decision Record",
+      "template": "Create a new ADR in docs/adr/ following the format of existing ADRs (0001-0004). Number it sequentially."
+    },
+    "issue": {
+      "description": "Create a GitHub issue using the appropriate template",
+      "template": "Create a GitHub issue for the project. Use one of the templates in .github/ISSUE_TEMPLATE/ (research.yml, feature.yml, benchmark.yml, documentation.yml, bug.yml, engineering-question.yml) depending on the type."
+    }
+  }
+}
