@@ -2,16 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/),
-and this project adheres to [Semantic Versioning](https://semver.org/).
+The format is inspired by Keep a Changelog and follows Semantic Versioning.
 
-## [0.1.0] - 2026-07-06
+---
+
+## [0.1.0] - YYYY-MM-DD
 
 ### Added
 
-- Initial project structure
-- Documentation (README, CONTRIBUTING, CODE_OF_CONDUCT)
-- CI configuration
-- GitHub configuration (CODEOWNERS, PR template, Dependabot)
-- Security policy
-- .gitignore and .editorconfig
+- Initial repository structure
+- Project documentation
+- Contribution guidelines
+- Code of Conduct
+- MIT License
+- CI/CD foundation
+- Dependabot configuration
