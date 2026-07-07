@@ -55,7 +55,7 @@ java-modern-lab/
 ├── ENGINEERING_PRINCIPLES.md   10 guiding principles
 ├── CHANGELOG.md
 ├── SECURITY.md
-├── pom.xml                     Maven, Java 25
+├── pom.xml                     Maven, JDK 26
 ├── .editorconfig
 └── .gitignore
 ```
@@ -146,7 +146,7 @@ Every contribution must:
 
 ## Java Configuration
 
-- **Version:** Java 25
+- **Version:** JDK 26 (latest stable)
 - **Build:** Maven (pom.xml at root)
 - **Formatting:** Spotless (enforced)
 - **Testing:** JUnit

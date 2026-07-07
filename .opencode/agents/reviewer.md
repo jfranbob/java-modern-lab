@@ -14,7 +14,7 @@ Review contributions against these quality gates:
 - Compiles successfully — run `mvn compile -q`
 - No static analysis errors
 - Clean formatting — run `mvn spotless:check`
-- Uses Java 25 features appropriately
+- Uses JDK 26 features appropriately
 - Follows coding standards (readability, immutability, meaningful names)
 
 ### Tests
