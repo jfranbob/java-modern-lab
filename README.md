@@ -250,7 +250,6 @@ When a new JDK is released, a research issue is created to evaluate migration, d
 All commands use the Maven Wrapper (`./mvnw`) to ensure reproducible builds.
 
 ---
-
 # Engineering Workflow
 
 Every module follows the same lifecycle.
