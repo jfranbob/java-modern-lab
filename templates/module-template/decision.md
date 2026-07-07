@@ -1,0 +1,39 @@
+# ADR-NNNN: DECISION_TITLE
+
+## Status
+
+DECISION_STATUS
+
+## Context
+
+DECISION_CONTEXT
+
+## Decision
+
+DECISION_DESCRIPTION
+
+## Consequences
+
+### Positive
+
+- POSITIVE_CONSEQUENCE_1
+- POSITIVE_CONSEQUENCE_2
+
+### Negative
+
+- NEGATIVE_CONSEQUENCE_1
+- NEGATIVE_CONSEQUENCE_2
+
+## Alternatives Considered
+
+### Alternative 1: ALTERNATIVE_1
+
+ALTERNATIVE_1_DESCRIPTION
+
+**Rejected because:** REJECTION_REASON_1
+
+### Alternative 2: ALTERNATIVE_2
+
+ALTERNATIVE_2_DESCRIPTION
+
+**Rejected because:** REJECTION_REASON_2
