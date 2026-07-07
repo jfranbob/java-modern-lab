@@ -21,7 +21,7 @@ Use this when you need to create a new engineering module.
 modules/<domain>/<module-name>/
 ├── README.md         Engineering question and overview
 ├── theory.md         Deep explanation
-├── example/          Runnable Java 25 code
+├── example/          Runnable JDK 26 code
 │   └── Main.java
 ├── tests/            Automated tests
 │   └── ModuleTest.java
@@ -29,7 +29,7 @@ modules/<domain>/<module-name>/
 └── references.md     Authoritative sources
 ```
 
-## Java 25 Features to Consider
+## JDK 26 Features to Consider
 
 - Records
 - Sealed classes and interfaces

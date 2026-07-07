@@ -15,11 +15,11 @@ When asked to create a new module:
 3. Create the module under `modules/<module-name>/` with:
    - `README.md` — what the module is about and the engineering question it answers
    - `theory.md` — deep explanation of the concept
-   - `example/` — runnable Java 25 code
+   - `example/` — runnable JDK 26 code
    - `tests/` — automated tests
    - `decision.md` — Engineering Decision Record (ADR style)
    - `references.md` — authoritative sources
-4. Use Java 25 features where appropriate.
+4. Use JDK 26 features where appropriate.
 5. Update `modules/README.md` to list the new module.
 6. Create or update an ADR in `docs/adr/` documenting the decision to add the module.
 

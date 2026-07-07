@@ -175,7 +175,7 @@ java-modern-lab/
 ├── ENGINEERING_PRINCIPLES.md   10 guiding principles for the project
 ├── CHANGELOG.md
 ├── SECURITY.md
-├── pom.xml                     Maven project (Java 25)
+├── pom.xml                     Maven project (JDK 26)
 ├── .editorconfig
 └── .gitignore
 ```
@@ -207,6 +207,20 @@ ai-review.md
 ```
 
 This consistency makes the repository predictable and easy to navigate.
+
+---
+
+# Supported JDK
+
+Java Modern Lab targets the latest stable JDK.
+
+The project evolves together with the Java platform to explore new language features, APIs and JVM improvements.
+
+**Current version:** JDK 26
+
+Preview features are only enabled in specific modules that require them, and are always documented.
+
+When a new JDK is released, a research issue is created to evaluate migration, document new JEPs, and assess impact.
 
 ---
 

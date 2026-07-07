@@ -41,7 +41,7 @@
     "create-module": {
       "description": "Scaffold a new module under modules/",
       "agent": "module-creator",
-      "template": "Create a new module at $1 using the module structure from templates/module-template/. Include README.md, theory.md, an example/, tests/, decision.md, and references.md. Use Java 25."
+      "template": "Create a new module at $1 using the module structure from templates/module-template/. Include README.md, theory.md, an example/, tests/, decision.md, and references.md. Use JDK 26 features."
     },
     "review": {
       "description": "Review the latest changes against quality gates",
