@@ -29,7 +29,7 @@ jobs:
         run: ./mvnw validate --batch-mode
 
   static-analysis:
-    name: Static Analysis (SpotBugs + PMD + JaCoCo)
+    name: Static Analysis (SpotBugs + PMD)
     runs-on: ubuntu-latest
 
     steps:
@@ -43,4 +43,4 @@ jobs:
           cache: maven
 
       - name: Run static analysis
-        run: ./mvnw verify --batch-mode -DskipTests
+        run: ./mvnw spotbugs:check pmd:check pmd:cpd-check --batch-mode
