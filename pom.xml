@@ -78,6 +78,8 @@
                             <includes>
                                 <include>src/main/java/**/*.java</include>
                                 <include>src/test/java/**/*.java</include>
+                                <include>example/src/main/java/**/*.java</include>
+                                <include>tests/src/test/java/**/*.java</include>
                             </includes>
                             <toggleOffOn/>
                             <palantirJavaFormat/>
@@ -88,6 +90,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${compiler.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>3.6.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>

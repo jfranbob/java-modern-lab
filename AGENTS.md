@@ -73,7 +73,8 @@ module/
 ├── example/          Runnable code
 ├── tests/            Automated tests
 ├── decision.md       Engineering Decision Record
-└── references.md     Sources and further reading
+├── references.md     Sources and further reading
+└── ai-review.md      AI-assisted review notes (optional)
 ```
 
 ---
