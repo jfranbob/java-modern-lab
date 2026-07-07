@@ -8,7 +8,7 @@
         <groupId>com.jfranbob</groupId>
         <artifactId>java-modern-lab</artifactId>
         <version>0.1.0</version>
-        <relativePath>../../../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>MODULE_ARTIFACT_ID</artifactId>
@@ -22,7 +22,6 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.6.0</version>
                 <executions>
                     <execution>
                         <id>add-example-source</id>

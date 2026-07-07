@@ -1,7 +1,7 @@
 package com.jfranbob.modules.modulename;
 
-/// Replace `modulename` with your module package name.
-/// This is the main example class for the module.
+// Replace `modulename` with your module package name.
+// This is the main example class for the module.
 public final class Main {
 
     private Main() {}

@@ -27,7 +27,7 @@ MODULE_ARTIFACT_ID/
 ├── references.md       Sources and further reading
 ├── ai-review.md        AI-assisted review notes
 ├── example/
-│   └── src/main/       Runnable code
+│   └── src/main/java/  Runnable code
 └── tests/
-    └── src/test/       Automated tests
+    └── src/test/java/  Automated tests
 ```

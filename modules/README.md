@@ -26,5 +26,6 @@ To create a new module:
 
 1. Copy `templates/module-template/` to `modules/<domain>/<module-name>/`
 2. Rename packages from `modulename` to your module name
-3. Replace `MODULE_*` placeholders in all files
+3. Replace all placeholders (`MODULE_*`, `DECISION_*`, `CONCEPT_*`, etc.) in all files
 4. Implement the example code and tests
+5. Add the module to `<modules>` in the root `pom.xml` to include it in the reactor build
