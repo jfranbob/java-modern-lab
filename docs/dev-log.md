@@ -19,3 +19,16 @@ Next:
 
 - Configure CI
 - Create Records module
+
+---
+
+## 2026-07-07
+
+Maven project foundation established.
+
+Completed:
+
+- Parent POM configured (JDK 26, Spotless, JUnit 5)
+- Maven Wrapper installed (./mvnw)
+- Build verified (compile, spotless:check)
+- Build documentation added to README

@@ -6,7 +6,7 @@ The format is inspired by Keep a Changelog and follows Semantic Versioning.
 
 ---
 
-## [0.1.0] - YYYY-MM-DD
+## [0.1.0] - 2026-07-07
 
 ### Added
 
@@ -17,3 +17,8 @@ The format is inspired by Keep a Changelog and follows Semantic Versioning.
 - MIT License
 - CI/CD foundation
 - Dependabot configuration
+- Maven parent POM (JDK 26)
+- Maven Wrapper (./mvnw)
+- Spotless code formatting
+- JUnit 5 test framework
+- Build documentation
