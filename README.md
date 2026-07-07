@@ -224,6 +224,32 @@ When a new JDK is released, a research issue is created to evaluate migration, d
 
 ---
 
+# Building the Project
+
+## Prerequisites
+
+- **JDK 26** (latest stable)
+- No Maven installation required (wrapper included)
+
+## Commands
+
+```bash
+# Build the project
+./mvnw compile
+
+# Run tests
+./mvnw test
+
+# Check code formatting
+./mvnw spotless:check
+
+# Auto-fix formatting
+./mvnw spotless:apply
+```
+
+All commands use the Maven Wrapper (`./mvnw`) to ensure reproducible builds.
+
+---
 # Engineering Workflow
 
 Every module follows the same lifecycle.
