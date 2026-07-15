@@ -19,7 +19,9 @@
         <module name="NeedBraces"/>
         <module name="LeftCurly"/>
         <module name="RightCurly"/>
-        <module name="WhitespaceAround"/>
+        <module name="WhitespaceAround">
+            <property name="allowEmptyTypes" value="true"/>
+        </module>
         <module name="GenericWhitespace"/>
         <module name="MethodParamPad"/>
         <module name="NoWhitespaceAfter"/>
