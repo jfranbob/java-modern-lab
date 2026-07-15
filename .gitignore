@@ -41,6 +41,9 @@ jacoco.exec
 # Generated documentation
 /site/
 
+# Maven shade plugin
+dependency-reduced-pom.xml
+
 # Temporary
 tmp/
 temp/
