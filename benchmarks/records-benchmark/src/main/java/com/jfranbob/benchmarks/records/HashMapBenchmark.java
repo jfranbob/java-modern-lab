@@ -32,6 +32,7 @@ public class HashMapBenchmark {
     private PointHandCoded handCodedKey;
 
     @Setup(Level.Trial)
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     public void setup() {
         recordMap = new HashMap<>();
         handCodedMap = new HashMap<>();
@@ -54,8 +55,9 @@ public class HashMapBenchmark {
     }
 
     @Benchmark
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     public void recordHashMapPut(Blackhole bh) {
-        var map = new HashMap<PointRecord, String>();
+        HashMap<PointRecord, String> map = new HashMap<>();
         for (int i = 0; i < 100; i++) {
             map.put(new PointRecord(i, i), "v");
         }
@@ -63,8 +65,9 @@ public class HashMapBenchmark {
     }
 
     @Benchmark
+    @SuppressWarnings("PMD.AvoidInstantiatingObjectsInLoops")
     public void handCodedHashMapPut(Blackhole bh) {
-        var map = new HashMap<PointHandCoded, String>();
+        HashMap<PointHandCoded, String> map = new HashMap<>();
         for (int i = 0; i < 100; i++) {
             map.put(new PointHandCoded(i, i), "v");
         }

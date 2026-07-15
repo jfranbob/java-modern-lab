@@ -19,6 +19,7 @@ import org.openjdk.jmh.annotations.Warmup;
 @Measurement(iterations = 5, time = 1)
 @Fork(2)
 @State(Scope.Thread)
+@SuppressWarnings("PMD.SignatureDeclareThrowsException")
 public class JacksonBenchmark {
 
     private static final String JSON = """

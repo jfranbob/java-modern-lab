@@ -2,6 +2,7 @@ package com.jfranbob.benchmarks.records;
 
 import java.util.Objects;
 
+@SuppressWarnings({"PMD.AvoidFieldNameMatchingMethodName", "PMD.ShortMethodName"})
 public final class PointHandCoded {
 
     private final int x;
