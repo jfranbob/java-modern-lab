@@ -14,9 +14,9 @@ public final class ShapeClassifier {
 
     public static boolean isPolygonal(Shape shape) {
         return switch (shape) {
-            case Circle c -> false;
-            case Rectangle r -> true;
-            case Triangle t -> true;
+            case Circle _ -> false;
+            case Rectangle _ -> true;
+            case Triangle _ -> true;
         };
     }
 }
