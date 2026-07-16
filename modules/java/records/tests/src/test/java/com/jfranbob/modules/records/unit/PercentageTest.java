@@ -37,6 +37,11 @@ class PercentageTest {
     }
 
     @Test
+    void shouldRejectAdditionOver100() {
+        assertThrows(IllegalArgumentException.class, () -> Percentage.of(60).add(Percentage.of(50)));
+    }
+
+    @Test
     void shouldAllowBoundaries() {
         assertDoesNotThrow(() -> Percentage.of(0));
         assertDoesNotThrow(() -> Percentage.of(100));

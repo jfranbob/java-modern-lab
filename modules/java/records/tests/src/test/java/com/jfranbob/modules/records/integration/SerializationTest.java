@@ -34,8 +34,41 @@ class SerializationTest {
     }
 
     @Test
-    void recordEnforcesInvariantOnDeserialization() {
-        assertThrows(IllegalArgumentException.class, () -> new RangeRecord(100, 1));
+    void recordEnforcesInvariantOnDeserialization() throws Exception {
+        var valid = new RangeRecord(1, 10);
+        var bos = new ByteArrayOutputStream();
+        try (var oos = new ObjectOutputStream(bos)) {
+            oos.writeObject(valid);
+        }
+        var data = bos.toByteArray();
+
+        int offset = findFieldOffset(data, 10, 1);
+        if (offset >= 0) {
+            data[offset + 3] = 1; // hi = 1
+            data[offset + 7] = 100; // lo = 100
+        }
+
+        assertThrows(InvalidObjectException.class, () -> {
+            try (var ois = new ObjectInputStream(new ByteArrayInputStream(data))) {
+                ois.readObject();
+            }
+        });
+    }
+
+    private int findFieldOffset(byte[] data, int hi, int lo) {
+        for (int i = 0; i < data.length - 7; i++) {
+            if (data[i] == 0
+                    && data[i + 1] == 0
+                    && data[i + 2] == 0
+                    && data[i + 3] == hi
+                    && data[i + 4] == 0
+                    && data[i + 5] == 0
+                    && data[i + 6] == 0
+                    && data[i + 7] == lo) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Test
