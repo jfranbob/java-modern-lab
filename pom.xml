@@ -9,6 +9,10 @@
     <version>0.1.0</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>modules/java/records</module>
+    </modules>
+
     <name>Java Modern Lab</name>
     <description>Modern Java engineering knowledge base</description>
     <url>https://github.com/jfranbob/java-modern-lab</url>
