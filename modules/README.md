@@ -13,12 +13,6 @@ Every module follows the same structure:
 
 Modules are grouped by domain rather than by difficulty.
 
-## Modules
-
-### Java
-
-- [Records](java/records/) — Should Java Records replace traditional DTO classes?
-
 The goal is to create a consistent and discoverable knowledge base.
 
 ## Creating a New Module
