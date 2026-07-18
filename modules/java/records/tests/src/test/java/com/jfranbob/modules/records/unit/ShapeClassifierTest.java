@@ -2,7 +2,11 @@ package com.jfranbob.modules.records.unit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.jfranbob.modules.records.sealedhierarchies.*;
+import com.jfranbob.modules.records.sealedhierarchies.Circle;
+import com.jfranbob.modules.records.sealedhierarchies.Rectangle;
+import com.jfranbob.modules.records.sealedhierarchies.Shape;
+import com.jfranbob.modules.records.sealedhierarchies.ShapeClassifier;
+import com.jfranbob.modules.records.sealedhierarchies.Triangle;
 import org.junit.jupiter.api.Test;
 
 class ShapeClassifierTest {
