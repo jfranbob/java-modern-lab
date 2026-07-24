@@ -33,6 +33,20 @@ class SerializationTest {
         assertEquals(100, deserialized.hi());
     }
 
+    /**
+     * Verifies that Record deserialization always invokes the canonical constructor,
+     * enforcing invariants. Unlike traditional classes, a malicious byte stream
+     * cannot bypass validation.
+     *
+     * <p>Strategy: Serialize a valid {@code RangeRecord(1, 10)}, locate the "lo"
+     * and "hi" int fields in the byte stream, swap them to produce {@code (100, 1)},
+     * which violates the {@code lo <= hi} invariant. The Record must throw
+     * {@link InvalidObjectException} because deserialization goes through the
+     * canonical constructor.
+     *
+     * <p>Note: {@link #findFieldOffset} assumes 4-byte big-endian int serialization,
+     * which is specific to {@link ObjectOutputStream}'s wire format in the JDK.
+     */
     @Test
     void recordEnforcesInvariantOnDeserialization() throws Exception {
         var valid = new RangeRecord(1, 10);
@@ -55,6 +69,20 @@ class SerializationTest {
         });
     }
 
+    /**
+     * Searches the serialized byte stream for two consecutive 4-byte big-endian
+     * integers matching the expected {@code hi} and {@code lo} values.
+     *
+     * <p>This is deliberately fragile: it relies on the internal wire format of
+     * {@link ObjectOutputStream}, which may vary across JDK implementations or
+     * versions. It is used here only to demonstrate that Record deserialization
+     * enforces invariants — a scenario that would be impractical to test otherwise.
+     *
+     * @param data the serialized byte array
+     * @param hi   the expected value of the first integer
+     * @param lo   the expected value of the second integer
+     * @return the byte offset where the two integers are found, or -1
+     */
     private int findFieldOffset(byte[] data, int hi, int lo) {
         for (int i = 0; i < data.length - 7; i++) {
             if (data[i] == 0
